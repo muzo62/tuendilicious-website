@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/logo1.png" type="image/jpeg">
+  <title>galerie - tuendilicious</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  
+</head>
+<body>
+  <!-- Header (wie auf anderen Seiten) -->
+  <header id="header">
+    <div class="container">
+      <h1 class="logo1"><a href="index.html">tuendilicious</a></h1>
+      <h1 class="logo1">
+        <a href="index.html">
+          <img src="images/logo1.png" alt="tuendilicious Logo" style="height: 80px; margin-top: 10px;">
+        </a>
+      </h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html#home">home</a></li>
+          <li><a href="index.html#about-page">über mich</a></li>
+          <li><a href="gallery.html" class="active">galerie</a></li>
+        </ul>
+        <div class="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Galerie Section -->
+  <section id="gallery">
+    <div class="container">
+      <div class="gallery-grid">
+        <!-- Beispiel-Galerie-Items; ersetze die Bilddateinamen durch deine eigenen -->
+        <div class="gallery-item">
+          <img src="images/cake1.jpg" alt="Torte 1">
+        </div>
+        <div class="gallery-item">
+          <img src="images/cake2.jpg" alt="Torte 2">
+        </div>
+        <div class="gallery-item">
+          <img src="images/cake3.jpg" alt="Torte 3">
+        </div>
+        <div class="gallery-item">
+          <img src="images/cake4.jpg" alt="Torte 4">
+        </div>
+        <div class="gallery-item">
+          <img src="images/cake5.jpg" alt="Torte 5">
+        </div>
+        <div class="gallery-item">
+          <img src="images/cake6.jpg" alt="Torte 6">
+        </div>
+        <div class="gallery-item">
+          <img src="images/cake7.jpg" alt="Torte 7">
+        </div>
+        <div class="gallery-item">
+          <img src="images/cake8.jpg" alt="Torte 8">
+        </div>
+        <div class="gallery-item">
+          <img src="images/cake12.jpg" alt="Torte 8">
+        </div>
+        <div class="gallery-item">
+          <img src="images/cake13.jpg" alt="Torte 8">
+        </div>
+        <div class="gallery-item">
+          <img src="images/cake14.jpg" alt="Torte 8">
+        </div>
+    </div>
+</div>
+
+<!-- Modal for enlarged image -->
+<div id="modal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modal-image">
+  <div id="caption"></div>
+</div>
+   
+  </section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <p>Kontakt: <a href="mailto:mihotunde69@gmail.com">mihotunde69@gmail.com</a></p>
+      <p><a href="https://www.instagram.com/tuendilicious/" target="_blank">Instagram</a></p>
+    </div>
+    <div class="footer-right">
+      <p>&copy; 2025 tuendilicious. Alle Rechte vorbehalten.</p>
+    </div>
+  </div>
+</footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

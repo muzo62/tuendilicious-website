@@ -1,0 +1,454 @@
+/* Allgemeine Einstellungen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Pacifico', cursive;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  background: rgba(255, 255, 255, 0.8); /* Fixer Hintergrund, 80% Deckkraft */
+  border-bottom: 1px solid rgba(221, 221, 221, 0.8);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  transition: none;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.logo1 img {
+  height: 50px;  /* Passe den Wert hier nach Belieben an */
+  width: auto;
+}
+
+.logo1 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: #333;
+  margin-bottom: 4px;
+  border-radius: 3px;
+}
+
+/* Hero Section */
+.hero {
+  background: url('../images/hero.jpg') no-repeat center center/cover;
+  height: 100vh; /* Volle Höhe des Viewports */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding-top: 0;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: white;
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+/* Sections */
+section {
+  padding: 100px 0;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+/* Über mich Section */
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 40px 0;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 50%;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.about-image {
+  flex: 0 0 auto;
+  text-align: right;
+}
+
+.about-image img {
+  display: block;
+  max-width: 400px;
+  width: auto;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Abstand, damit die Galerie nicht vom fixierten Header überlappt wird */
+section#gallery {
+  margin-top: 50px;
+}
+
+/* GRAUER TRENNSTRICH */
+.section-divider {
+  border: none;
+  height: 2px;
+  background-color: #ccc;
+  margin: 40px 0;
+}
+
+/* HELLGRAUER BEREICH ab Galerie */
+.grey-section {
+  background-color: #f5f5f5;
+  padding: 40px 0;
+}
+
+/* Galerie */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Galerie Button Styling */
+.gallery-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #555;
+}
+
+/* Kontakt */
+.contact-form {
+  max-width: 600px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  padding: 10px;
+  border: none;
+  background: #333;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #555;
+}
+
+
+/* Footer-Grundlayout */
+footer {
+  background-color: #333;    /* Dunkler Hintergrund */
+  color: #fff;               /* Helle Schrift */
+  padding: 10px 20px;        /* Schmaler Balken, inkl. horizontaler Rand */
+  font-size: 14px;
+}
+
+/* Container mit zwei Bereichen (links, rechts) */
+.footer-container {
+  display: flex;
+  align-items: flex-start;    /* Richtet Elemente oben aus */
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Linker Block: Kontakt und Instagram */
+.footer-left p,
+.footer-right p {
+  margin: 0;                 /* Entfernt Standardabstand */
+  padding: 2px 0;            /* Kleiner Abstand zwischen Zeilen */
+}
+
+/* Links nicht unterstrichen und weiß */
+.footer-container a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+/* Modal container */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+/* Das vergrößerte Bild */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Schließ-Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+
+
+
+@media (max-width: 768px) {
+  /* Header verkleinern und nur Logo + Burger-Icon anzeigen */
+  header .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Wenn du den Text "Tuendilicious" komplett entfernen willst, 
+     kannst du ihn entweder aus dem HTML löschen oder per CSS ausblenden.
+     Beispiel zum Ausblenden, falls es in einem <span> oder ähnlichem steht: */
+  .logo1 a span {
+    display: none;
+  }
+
+  /* Logo etwas kleiner */
+  .logo1 img {
+    height: 40px; 
+    width: auto;
+  }
+
+  /* Hamburger-Icon leicht verkleinern */
+  .mobile-menu-toggle span {
+    width: 20px;
+    height: 2px;
+    margin-bottom: 3px;
+  }
+
+  /* Navigation als Dropdown (ausklappbar) */
+  nav ul {
+    display: none; 
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    top: 60px; 
+    right: 0;
+    width: 100%;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+    padding: 10px 0;
+  }
+  
+  nav ul li {
+    margin: 8px 0;
+    text-align: center;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  /* Hero-Bereich verkleinern */
+  .hero {
+    height: 70vh;
+    padding: 0 10px;
+    background-position: center; 
+    background-size: cover;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Sections etwas weniger Padding */
+  section {
+    padding: 50px 0;
+  }
+
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  /* Über mich Section: Besseres Layout auf schmalen Screens */
+  .about-content {
+    flex-direction: column;   /* Inhalte untereinander */
+    align-items: center;      /* zentriert Bild & Text */
+    gap: 20px;                /* Abstand zwischen Text und Bild */
+    padding: 20px 1rem;
+  }
+
+  /* Text nicht zentrieren, um „Lücken“ durch Blocksatz zu vermeiden */
+  .about-text {
+    max-width: 600px;         /* Verhindert zu breite Zeilen */
+    width: 100%;
+    text-align: left;         /* Linksbündig statt blocksatzzentriert */
+    font-size: 0.9rem;        /* Etwas kleinere Schrift auf mobilen Geräten */
+    line-height: 1.5;
+    margin: 0 auto;           /* Zentrierte Box, aber Text linksbündig */
+  }
+
+  .about-image {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  /* Galerie-Bilder vollbreit und responsive */
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Footer kompakter */
+  footer {
+    padding: 15px 0;
+    font-size: 0.8rem;
+  }
+
+
+  
+  @media (max-width: 600px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;   /* Zentriert die Container selbst */
+      text-align: center;    /* Zentriert auch den Text */
+    }
+    
+    .footer-right {
+      margin-top: 10px;      /* Kleiner Abstand zum Block links */
+    }
+  }
+}
+
+
