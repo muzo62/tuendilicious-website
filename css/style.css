@@ -23,7 +23,7 @@ body {
 
 /* Header */
 header {
-  background: rgba(255, 255, 255, 0.8); /* Fixer Hintergrund, 80% Deckkraft */
+  background: rgba(255, 255, 255, 0.8); 
   border-bottom: 1px solid rgba(221, 221, 221, 0.8);
   position: fixed;
   width: 100%;
@@ -82,7 +82,7 @@ nav ul li a {
 /* Hero Section */
 .hero {
   background: url('../images/hero.jpg') no-repeat center center/cover;
-  height: 100vh; /* Volle Höhe des Viewports */
+  height: 100vh; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -245,36 +245,36 @@ section#gallery {
 
 /* Footer-Grundlayout */
 footer {
-  background-color: #333;    /* Dunkler Hintergrund */
-  color: #fff;               /* Helle Schrift */
-  padding: 10px 20px;        /* Schmaler Balken, inkl. horizontaler Rand */
+  background-color: #333;    
+  color: #fff;               
+  padding: 10px 20px;        
   font-size: 14px;
 }
 
-/* Container mit zwei Bereichen (links, rechts) */
+
 .footer-container {
   display: flex;
-  align-items: flex-start;    /* Richtet Elemente oben aus */
+  align-items: flex-start;    
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Linker Block: Kontakt und Instagram */
+
 .footer-left p,
 .footer-right p {
-  margin: 0;                 /* Entfernt Standardabstand */
-  padding: 2px 0;            /* Kleiner Abstand zwischen Zeilen */
+  margin: 0;               
+  padding: 2px 0;           
 }
 
-/* Links nicht unterstrichen und weiß */
+
 .footer-container a {
   text-decoration: none;
   color: #fff;
 }
 
 
-/* Modal container */
+
 .modal {
   display: none; 
   position: fixed;
@@ -288,7 +288,7 @@ footer {
   background-color: rgba(0,0,0,0.9);
 }
 
-/* Das vergrößerte Bild */
+
 .modal-content {
   margin: auto;
   display: block;
@@ -296,7 +296,7 @@ footer {
   max-width: 700px;
 }
 
-/* Schließ-Button */
+
 .close {
   position: absolute;
   top: 15px;
@@ -317,7 +317,7 @@ footer {
 
 
 @media (max-width: 768px) {
-  /* Header verkleinern und nur Logo + Burger-Icon anzeigen */
+ 
   header .container {
     flex-direction: row;
     align-items: center;
@@ -325,27 +325,23 @@ footer {
     padding: 0.5rem 1rem;
   }
 
-  /* Wenn du den Text "Tuendilicious" komplett entfernen willst, 
-     kannst du ihn entweder aus dem HTML löschen oder per CSS ausblenden.
-     Beispiel zum Ausblenden, falls es in einem <span> oder ähnlichem steht: */
   .logo1 a span {
     display: none;
   }
 
-  /* Logo etwas kleiner */
+ 
   .logo1 img {
     height: 40px; 
     width: auto;
   }
 
-  /* Hamburger-Icon leicht verkleinern */
+ 
   .mobile-menu-toggle span {
     width: 20px;
     height: 2px;
     margin-bottom: 3px;
   }
 
-  /* Navigation als Dropdown (ausklappbar) */
   nav ul {
     display: none; 
     flex-direction: column;
@@ -367,7 +363,6 @@ footer {
     display: flex;
   }
 
-  /* Hero-Bereich verkleinern */
   .hero {
     height: 70vh;
     padding: 0 10px;
@@ -384,7 +379,7 @@ footer {
     font-size: 1rem;
   }
 
-  /* Sections etwas weniger Padding */
+
   section {
     padding: 50px 0;
   }
@@ -394,22 +389,22 @@ footer {
     margin-bottom: 15px;
   }
 
-  /* Über mich Section: Besseres Layout auf schmalen Screens */
+
   .about-content {
-    flex-direction: column;   /* Inhalte untereinander */
-    align-items: center;      /* zentriert Bild & Text */
-    gap: 20px;                /* Abstand zwischen Text und Bild */
+    flex-direction: column;   
+    align-items: center;      
+    gap: 20px;               
     padding: 20px 1rem;
   }
 
-  /* Text nicht zentrieren, um „Lücken“ durch Blocksatz zu vermeiden */
+
   .about-text {
-    max-width: 600px;         /* Verhindert zu breite Zeilen */
+    max-width: 600px;        
     width: 100%;
-    text-align: left;         /* Linksbündig statt blocksatzzentriert */
-    font-size: 0.9rem;        /* Etwas kleinere Schrift auf mobilen Geräten */
+    text-align: left;        
+    font-size: 0.9rem;        
     line-height: 1.5;
-    margin: 0 auto;           /* Zentrierte Box, aber Text linksbündig */
+    margin: 0 auto;           
   }
 
   .about-image {
@@ -423,14 +418,14 @@ footer {
     border-radius: 5px;
   }
 
-  /* Galerie-Bilder vollbreit und responsive */
+  
   .gallery-item img {
     width: 100%;
     height: auto;
     object-fit: cover;
   }
 
-  /* Footer kompakter */
+  
   footer {
     padding: 15px 0;
     font-size: 0.8rem;
@@ -441,12 +436,12 @@ footer {
   @media (max-width: 600px) {
     .footer-container {
       flex-direction: column;
-      align-items: center;   /* Zentriert die Container selbst */
-      text-align: center;    /* Zentriert auch den Text */
+      align-items: center;  
+      text-align: center;   
     }
     
     .footer-right {
-      margin-top: 10px;      /* Kleiner Abstand zum Block links */
+      margin-top: 10px;     
     }
   }
 }
