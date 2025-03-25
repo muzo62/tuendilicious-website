@@ -1,4 +1,4 @@
-// js/script.js
+
 
 document.addEventListener('DOMContentLoaded', function() {
   // Mobile-Menü-Toggle
@@ -21,8 +21,8 @@ const images = document.querySelectorAll(".gallery-item img");
 images.forEach((img) => {
   img.addEventListener("click", function(){
     modal.style.display = "block";
-    modalImg.src = this.src;       // Quelle des angeklickten Bildes übernehmen
-    captionText.innerHTML = this.alt; // Alt-Text als Bildbeschreibung
+    modalImg.src = this.src;       
+    captionText.innerHTML = this.alt; 
   });
 });
 
@@ -34,7 +34,7 @@ closeBtn.onclick = function() {
 
 window.addEventListener('scroll', function() {
   const header = document.querySelector('header');
-  if (window.scrollY > 50) { // ab 50px Scrolltiefe
+  if (window.scrollY > 50) { 
     header.classList.add('scrolled');
   } else {
     header.classList.remove('scrolled');
